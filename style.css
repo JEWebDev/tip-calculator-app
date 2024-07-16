@@ -5,6 +5,7 @@
 
 :root {
   --clr-primary: hsl(172, 67%, 45%);
+  --clr-primary-light: hsl(173, 61%, 77%);
   --clr-accent: hsl(183, 100%, 15%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
@@ -117,6 +118,20 @@ input[type="radio"] {
   display: none;
 }
 
+input[type="number"].error {
+  outline: none;
+  border: 2px solid hsl(13, 70%, 60%);
+}
+
+input[type="number"].error:focus {
+  border: 2px solid hsl(13, 70%, 60%);
+}
+
+input[type="number"].error:hover {
+  border: 2px solid hsl(13, 70%, 60%);
+  outline: none;
+}
+
 #bill {
   background-image: url("images/icon-dollar.svg");
   background-repeat: no-repeat;
@@ -175,6 +190,20 @@ label {
   flex-direction: column;
   gap: 1.25rem;
 }
+
+.error-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .span {
+    font-size: 1rem;
+    color: hsl(13, 70%, 60%);
+  }
+}
+
+.hidden {
+  display: none;
+}
 /*******************/
 /* General Styles */
 /*****************/
@@ -224,12 +253,15 @@ header {
     cursor: pointer;
   }
 
+  label:hover {
+    background-color: var(--clr-primary-light);
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+  }
+
   input[type="radio"]:checked + label {
     background-color: var(--clr-primary);
     color: var(--clr-accent);
-  }
-
-  input[type="number"] {
   }
 
   input[type="number"]::placeholder {
