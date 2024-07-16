@@ -91,6 +91,7 @@ h6 {
 /************/
 
 input[type="number"] {
+  min-width: 100%;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -229,7 +230,6 @@ header {
   }
 
   input[type="number"] {
-    max-width: 9.25rem;
   }
 
   input[type="number"]::placeholder {
@@ -270,7 +270,7 @@ header {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   main {
     display: grid;
     place-content: center;
