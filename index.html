@@ -24,56 +24,64 @@
       </header>
 
       <article class="calculator-wrapper">
-        <div class="wrapper">
-          <label for="bill">Bill</label>
-          <input type="number" name="bill" id="bill" />
-        </div>
+        <div class="inputs-container">
+          <div class="wrapper">
+            <label for="bill">Bill</label>
+            <input type="number" name="bill" id="bill" value="142.55" />
+          </div>
 
-        <div class="select-tip-wrapper">
-          <label for="form">Select tip %</label>
-          <form>
-            <input type="radio" name="tip" id="5" value="0.05" />
-            <label for="5">5 %</label>
+          <div class="select-tip-wrapper">
+            <label for="form">Select tip %</label>
+            <form class="select-tip">
+              <input type="radio" name="tip" id="5" value="0.05" />
+              <label for="5">5%</label>
 
-            <input type="radio" name="tip" id="10" value="0.1" />
-            <label for="10">10%</label>
+              <input type="radio" name="tip" id="10" value="0.1" />
+              <label for="10">10%</label>
 
-            <input type="radio" name="tip" id="15" value="0.15" />
-            <label for="15">15%</label>
+              <input type="radio" name="tip" id="15" value="0.15" checked />
+              <label for="15">15%</label>
 
-            <input type="radio" name="tip" id="25" value="0.25" />
-            <label for="25">25%</label>
+              <input type="radio" name="tip" id="25" value="0.25" />
+              <label for="25">25%</label>
 
-            <input type="radio" name="tip" id="50" value="0.5" />
-            <label for="50">50%</label>
+              <input type="radio" name="tip" id="50" value="0.5" />
+              <label for="50">50%</label>
 
-            <input type="number" name="custom" id="custom-tip" />
-          </form>
-
+              <input
+                type="number"
+                name="custom"
+                id="custom-tip"
+                placeholder="Custom"
+              />
+            </form>
+          </div>
           <div class="wrapper">
             <label for="people">Number of people</label>
-            <input type="number" name="people" id="people" />
+            <input type="number" name="people" id="people" value="5" />
           </div>
-
-          <div class="results-container">
+        </div>
+        <div class="results-container">
+          <div class="container">
             <div class="results-wrapper">
               <div class="wrapper">
                 <p>Tip amount</p>
                 <span>/ person</span>
               </div>
-              <p class="tip-amount">$</p>
+
+              <p class="tip" id="tip-amount">$4.27</p>
             </div>
 
             <div class="results-wrapper">
               <div class="wrapper">
-                <p>Tip amount</p>
+                <p>Total</p>
                 <span>/ person</span>
               </div>
-              <p class="total-amount">$</p>
+              <p class="tip" id="tip-total">$32.79</p>
             </div>
-
-            <button class="reset-button">reset</button>
           </div>
+
+          <button class="reset-button">reset</button>
         </div>
       </article>
     </main>
