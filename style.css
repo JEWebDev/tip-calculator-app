@@ -160,6 +160,7 @@ label {
 .results-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .tip {
     font-size: 2rem;
@@ -244,6 +245,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  justify-content: space-between;
 
   .reset-button {
     min-width: 100%;
@@ -266,4 +268,39 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    place-content: center;
+  }
+  header {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .calculator-wrapper {
+    min-width: 920px;
+    margin: 0 auto;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    .inputs-container {
+      flex: 1;
+    }
+
+    .results-container {
+      flex: 1;
+
+      .results-wrapper {
+        .tip {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 }
