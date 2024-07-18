@@ -86,7 +86,7 @@ function calculateTip() {
   }
 }
 
-$bill.addEventListener("blur", (event) => {
+$bill.addEventListener("input", (event) => {
   event.stopPropagation();
   enableButton();
   calculateTip();
@@ -100,13 +100,13 @@ $tipOptions.forEach((option) => {
   });
 });
 
-$customTip.addEventListener("blur", (event) => {
+$customTip.addEventListener("input", (event) => {
   event.stopPropagation();
   enableButton();
   calculateTip();
 });
 
-$people.addEventListener("blur", (event) => {
+$people.addEventListener("input", (event) => {
   event.stopPropagation();
   enableButton();
   calculateTip();
