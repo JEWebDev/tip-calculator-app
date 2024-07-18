@@ -27,7 +27,13 @@
         <div class="inputs-container">
           <div class="wrapper">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" value="0" />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              value=""
+              placeholder="0"
+            />
           </div>
 
           <div class="select-tip-wrapper">
@@ -67,7 +73,13 @@
               <label for="people">Number of people</label>
               <label class="hidden span" id="error-msg">Can't be zero</label>
             </div>
-            <input type="number" name="people" id="people" value="1" />
+            <input
+              type="number"
+              name="people"
+              id="people"
+              value=""
+              placeholder="0"
+            />
           </div>
         </div>
         <div class="results-container">
@@ -78,7 +90,7 @@
                 <span>/ person</span>
               </div>
 
-              <p class="tip" id="tip-amount">$0</p>
+              <p class="tip" id="tip-amount">$0.00</p>
             </div>
 
             <div class="results-wrapper">
@@ -86,11 +98,13 @@
                 <p>Total</p>
                 <span>/ person</span>
               </div>
-              <p class="tip" id="tip-total">$0</p>
+              <p class="tip" id="tip-total">$0.00</p>
             </div>
           </div>
 
-          <button class="reset-button" id="reset-btn">reset</button>
+          <button disabled class="reset-button disabled" id="reset-btn">
+            reset
+          </button>
         </div>
       </article>
     </main>

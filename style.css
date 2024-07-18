@@ -206,6 +206,14 @@ label {
 .hidden {
   display: none;
 }
+
+.disabled {
+  background-color: #0d686d !important;
+  color: #00474b !important;
+}
+.disabled:hover {
+  cursor: auto;
+}
 /*******************/
 /* General Styles */
 /*****************/

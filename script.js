@@ -51,16 +51,29 @@ function getNumberOfPeople() {
   }
 }
 
+function disableButton() {
+  $resetBtn.disabled = true;
+  $resetBtn.classList.add("disabled");
+}
+
+function enableButton() {
+  $resetBtn.disabled = false;
+  $resetBtn.classList.remove("disabled");
+}
+
 function resetInputs() {
   let $defaultTip = $("default");
+  disableButton();
   $defaultTip.checked = true;
-  $bill.value = 0;
+  $bill.value = "";
   $customTip.value = "";
-  $people.value = 1;
-  updateResults("0", "0");
+  $people.value = "";
+  removeError();
+  updateResults("0.00", "0.00");
 }
 
 function calculateTip() {
+  $resetBtn.disabled = false;
   let people = getNumberOfPeople();
   if (people) {
     let bill = getBill();
@@ -76,23 +89,27 @@ function calculateTip() {
 
 $bill.addEventListener("blur", (event) => {
   event.stopPropagation();
+  enableButton();
   calculateTip();
 });
 
 $tipOptions.forEach((option) => {
   option.addEventListener("click", (event) => {
     event.stopPropagation();
+    enableButton();
     calculateTip();
   });
 });
 
 $customTip.addEventListener("blur", (event) => {
   event.stopPropagation();
+  enableButton();
   calculateTip();
 });
 
 $people.addEventListener("blur", (event) => {
   event.stopPropagation();
+  enableButton();
   calculateTip();
 });
 
