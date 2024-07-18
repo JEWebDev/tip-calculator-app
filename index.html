@@ -27,7 +27,7 @@
         <div class="inputs-container">
           <div class="wrapper">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" value="142.55" />
+            <input type="number" name="bill" id="bill" value="0" />
           </div>
 
           <div class="select-tip-wrapper">
@@ -39,7 +39,13 @@
               <input type="radio" name="tip" id="10" value="0.1" />
               <label for="10">10%</label>
 
-              <input type="radio" name="tip" id="15" value="0.15" checked />
+              <input
+                type="radio"
+                name="tip"
+                id="default"
+                value="0.15"
+                checked
+              />
               <label for="15">15%</label>
 
               <input type="radio" name="tip" id="25" value="0.25" />
@@ -61,7 +67,7 @@
               <label for="people">Number of people</label>
               <label class="hidden span" id="error-msg">Can't be zero</label>
             </div>
-            <input type="number" name="people" id="people" value="5" />
+            <input type="number" name="people" id="people" value="1" />
           </div>
         </div>
         <div class="results-container">
@@ -72,7 +78,7 @@
                 <span>/ person</span>
               </div>
 
-              <p class="tip" id="tip-amount">$4.27</p>
+              <p class="tip" id="tip-amount">$0</p>
             </div>
 
             <div class="results-wrapper">
@@ -80,7 +86,7 @@
                 <p>Total</p>
                 <span>/ person</span>
               </div>
-              <p class="tip" id="tip-total">$32.79</p>
+              <p class="tip" id="tip-total">$0</p>
             </div>
           </div>
 
