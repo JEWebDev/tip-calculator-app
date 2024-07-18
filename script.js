@@ -73,7 +73,6 @@ function resetInputs() {
 }
 
 function calculateTip() {
-  $resetBtn.disabled = false;
   let people = getNumberOfPeople();
   if (people) {
     let bill = getBill();
