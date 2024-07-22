@@ -15,7 +15,7 @@ const $resetBtn = $("reset-btn");
 const $errorMsg = $("error-msg");
 
 function getBill() {
-  return Number($bill.value);
+  return Math.abs(Number($bill.value));
 }
 
 function getTipPercentage() {
